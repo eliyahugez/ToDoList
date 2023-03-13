@@ -1,0 +1,395 @@
+/* Set the font family and font size for the entire document */
+body {
+  font-family: cursive;
+  font-size: 16px;
+}
+
+/* Style the task container */
+.task-container {
+  background-color: #c5e3b5;
+  border-radius: 10px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+  padding: 10px;
+  margin-bottom: 20px;
+  margin-left: 10rem;
+  margin-right: 10rem;
+}
+
+/* Style the task date */
+.task-date {
+  color: #293731;
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+/* Style the task status */
+.spanStatus {
+  color: #4d775a;
+  font-size: 26px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+/* Style the task ID */
+.task-id {
+  color: #487d4e;
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+/* Style the task title */
+.task-title {
+  color: #000;
+  font-size: 35px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  text-align: center;
+  font-family: Georgia, serif;
+}
+
+/* Style the task info */
+.task-info {
+  color: #000;
+  font-size: 22px;
+  margin-bottom: 20px;
+  text-align: center;
+  font-family: Georgia, serif;
+}
+
+/* Style the task buttons */
+.task-removeBtn,
+.task-EditBtn,
+.task-doneBtn {
+  background-color: #0c9721;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 10px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  transition: background-color 0.3s ease;
+  display: inline-block;
+}
+
+/* Change the button color on hover */
+.task-removeBtn:hover,
+.task-EditBtn:hover {
+  background-color: #ff4d4d;
+}
+
+.task-EditBtn:hover {
+  background-color: #ffce00;
+}
+
+/* Style for the input elements */
+.inputTitle,
+.inputTaskInfo,
+.inputDate,
+.inputBtn,
+.cencelBtn {
+  display: block;
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+
+  box-sizing: border-box;
+  background-color: #fff;
+  color: #333;
+}
+
+/* Style for the input button */
+.inputBtn {
+  background-color: #ffce00;
+  color: #333;
+  font-weight: bold;
+  cursor: pointer;
+}
+.cencelBtn {
+  background-color: #e44444;
+  color: #333;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* Style for the input containers */
+.inputContaiterEdit {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: auto;
+  max-width: 400px;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  z-index: 999;
+}
+
+/* Style for the input container title */
+.inputContaiterEdit h2 {
+  margin-top: 0;
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  color: #333;
+  text-transform: uppercase;
+}
+
+/* Style for the input container close button */
+.inputContaiterEdit .closeBtn {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  font-size: 20px;
+  color: #333;
+  cursor: pointer;
+  border-radius: 19px;
+}
+.errorDivForEdit {
+  margin-top: 5px;
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+  color: #dc4545;
+  text-transform: uppercase;
+}
+
+/* styles for checkbox input */
+.task-doneBtn {
+  display: inline-block;
+  position: relative;
+  padding-left: 35px;
+  margin-right: 15px;
+  font-size: 18px;
+  line-height: 1.3;
+  color: #555;
+  cursor: pointer;
+}
+
+/* styles for the checkmark inside the checkbox */
+.task-doneBtn::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 50%;
+  width: 30px;
+  height: 30px;
+  margin-top: -15px;
+  background-color: #fff;
+  border: 2px solid #333;
+  border-radius: 3px;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+/* styles for the checkmark icon when checkbox is checked */
+.task-doneBtn:checked::before {
+  content: "\2714";
+  color: #fff;
+  text-align: center;
+  font-size: 47px;
+  line-height: 18px;
+  background-color: #ff8c00;
+  border-color: #ff8c00;
+  text-shadow: #da190b;
+}
+
+#newTaskTitle,
+#newTaskInfo,
+#newdate {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  margin-right: 10px;
+  flex-grow: 1;
+  box-sizing: border-box;
+  background-color: #f1f1f1;
+  font-size: 16px;
+}
+
+#addNewTaskBtn,
+#ClearAll,
+#Filter {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  margin: 10px;
+  background-color: #4caf50;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+#ClearAll {
+  background-color: #0c3315;
+}
+#Filter:hover {
+  background-color: #173785;
+}
+#addNewTaskBtn:hover {
+  background-color: #9ad147;
+}
+
+#ClearAll:hover {
+  background-color: #da190b;
+}
+#inputContainer {
+  margin-left: 10rem;
+}
+
+/* Set default styles for all h1 elements */
+h1,
+h3 {
+  font-size: 36px;
+  font-weight: bold;
+  color: #333333;
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+#spanH3 {
+  font-size: 20px;
+  font-weight: bold;
+  color: #0b6132;
+  text-align: center;
+  justify-content: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-left: 10rem;
+}
+
+#searchTasks {
+  margin-left: 10rem;
+  padding: 0.7rem;
+  margin-bottom: 0.4rem;
+  border-radius: 10px;
+}
+
+@media screen and (max-width: 600px) {
+  body {
+    font-size: 14px;
+  }
+  #searchTasks {
+    margin-left: 3rem;
+    padding: 0.1rem;
+    margin-bottom: 0.4rem;
+  }
+  /* Reduce the font size of the task info */
+  .task-info {
+    font-size: 14px;
+    font-family: Georgia, serif;
+  }
+
+  /* Reduce the padding and margin of the task container */
+  .task-container {
+    padding: 10px;
+    margin-bottom: 10px;
+    margin-left: 3rem;
+  }
+
+  /* Reduce the padding of the task buttons */
+  .task-removeBtn,
+  .task-EditBtn,
+  .task-doneBtn {
+    padding: 5px;
+    border-radius: 19px;
+  }
+
+  #newTaskTitle,
+  #newTaskInfo,
+  #newdate,
+  #addNewTaskBtn,
+  #ClearAll,
+  #Filter {
+    font-size: 12px;
+    margin-right: 3px;
+    margin-bottom: 3px;
+    padding: 4px;
+  }
+  #inputContainer {
+    margin-left: 0.5rem;
+    display: inline-block;
+    padding: 10px;
+  }
+  .task-doneBtn {
+    font-size: 16px;
+  }
+  .task-doneBtn::before {
+    left: 5px;
+    width: 14px;
+    height: 14px;
+    margin-top: -7px;
+  }
+
+  h1,
+  h3 {
+    font-size: 30px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+  #spanH3 {
+    font-size: 12px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    margin-left: 1rem;
+  }
+  .inputContaiterEdit {
+    width: 70%;
+    height: 70%;
+    max-width: none;
+    border-radius: 0;
+  }
+
+  .task-doneBtn::before {
+    left: -3px;
+    width: 20px;
+    height: 20px;
+    margin-top: -9px;
+  }
+  .spanStatus {
+    font-size: 16px;
+  }
+
+  .task-id {
+    font-size: 11px;
+  }
+
+  .task-date {
+    font-size: 12.5px;
+  }
+  .task-title {
+    font-size: 27px;
+    font-family: Georgia, serif;
+  }
+  .task-doneBtn:checked::before {
+    font-size: 29px;
+    line-height: 16px;
+    height: 20px;
+    width: 20px;
+    margin-top: -10px;
+  }
+}
+
+#errorDiv {
+  background-color: #adabaa;
+  border-radius: 10px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+  padding: 10px;
+  margin-bottom: 20px;
+  width: 80%;
+  text-align: center;
+  font-size: 1.5rem;
+  color: #d46767;
+  display: none;
+}

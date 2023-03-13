@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.0/font/bootstrap-icons.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+
+    <title>To Do list</title>
+  </head>
+  <body>
+    <h1>Task To do</h1>
+    <h3 id="h3"></h3>
+    <span id="spanH3"></span>
+
+    <div class="center" id="inputContainer">
+      <input required type="text" placeholder="Title" id="newTaskTitle" />
+      <input required type="text" placeholder="Description" id="newTaskInfo" />
+      <input required type="datetime-local" name="date" id="newdate" />
+      <input type="button" value="Add new Task" id="addNewTaskBtn" />
+      <input type="button" value="Clear All" id="ClearAll" />
+      <input type="button" value="Filter Complited Task" id="Filter" />
+      <div id="errorDiv">Please fill up all the fields</div>
+    </div>
+    <div>
+      <i class="fa-light fa-trash-can"></i>
+      <input
+        type="search"
+        id="searchTasks"
+        class="searchTasks"
+        placeholder="Search By Title Please"
+      />
+      <span id="spanForSearch"></span>
+    </div>
+    <div class="" id="taskList"></div>
+  </body>
+  <script src="app.js"></script>
+</html>
